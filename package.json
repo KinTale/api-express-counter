@@ -1,0 +1,27 @@
+{
+  "name": "api-express-counter",
+  "version": "1.0.0",
+  "description": "In this exercise we will build a simple counter API using express.",
+  "main": "script.js",
+  "scripts": {
+    "start" : "nodemon counter.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KinTale/api-express-counter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KinTale/api-express-counter/issues"
+  },
+  "homepage": "https://github.com/KinTale/api-express-counter#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
