@@ -11,6 +11,7 @@ app.get("/", (req, res) => {
     res.json()
 })
 let counter = 0
+let counterNames = []
 
 //- GET `/counter` - Returns the current value of the counter. The counter should start of at 0.
 app.get("/counter", (req, res) => {
@@ -75,14 +76,16 @@ It should be possible for the client to specify any counter name in the place of
 
 app.get("/counter/:name", (req, res) => {
     let counterName = req.params.name
-    res.json({ [counterName]: counter })
+    res.json(counterNames.push({ [counterName]: 0 }))
+    console.log(counterNames)
 })
 
 app.post(["/counter/:name/increment"], (req, res) => {
-    counter++
-    let counterName = req.params.name
-    res.json({ [counterName]: counter })
+    let urlName = req.params.name
+    
+    res.json()
 })
+console.log(counterNames)
 
 app.post(["/counter/:name/decrement"], (req, res) => {
     counter--
