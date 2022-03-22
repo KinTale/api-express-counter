@@ -53,7 +53,7 @@ app.delete("/counter", (req, res) => {
 
 app.put("/counter", (req, res) => {
     let value = req.query
-    counter = value.value
+    counter = Number(value.value.length > 0 ? value.value : counter)
     res.json({ counter: counter })
 })
 
